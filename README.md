@@ -6,7 +6,7 @@ A separately packaged version of the 'wrapper' scripts that previously were dist
 
 **what** ? : a packaged version of the ``pdf[nup,pun,join,90,180,270,flip,book,pocketmod,slides*up]`` scripts that were originally included (and installed) as part of [pdfjam](https://github.com/DavidFirth/pdfjam).
 
-**[RPM download here](https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.1/pdfjam-extras-0.1-0.noarch.rpm)** and manual install instructions below.
+-- **[RPM download here](https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.1/pdfjam-extras-0.1-0.noarch.rpm)**, **[.deb download here](https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.1/pdfjam-extras_0.1-1_all.deb)**  and manual install instructions below.
 
 These scripts are explicitly **not supported** by the original authors of [pdfjam](https://github.com/DavidFirth/pdfjam) for their [own reasons](https://github.com/DavidFirth/pdfjam-extras). It is indended this repo can become a place for _mild_ support as needed.  They are licensed under the [GPL](COPYING).
 
@@ -24,7 +24,7 @@ These scripts are explicitly **not supported** by the original authors of [pdfja
 
 ### Installing the scripts
 
-The easy way (via a pre-packaged RPM, and signed public key):
+The **easy way** (via a pre-packaged RPM, and signed public key):
 ```
 wget https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.1/pdfjam-extras-0.1-0.noarch.rpm
 wget -O package-signing-key.pub https://breckon.org/toby/pgp.txt
@@ -33,7 +33,15 @@ sudo rpm -i pdfjam-extras-0.1-0.noarch.rpm
 ```
 [following RPM convention this installs the scripts into ``/usr/bin``]
 
-The hard way (manually clone and install):
+The _other_ **easy way** (via a pre-packaged .deb package):
+```
+wget https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.1/pdfjam-extras_0.1-1_all.deb
+sudo dpkg -i pdfjam-extras_0.1-1_all.deb
+```
+[following .deb package convention this installs the scripts into ``/usr/bin`` + the .deb file is not digitally signed]
+
+
+The _slightly_ **harder way** (manually clone and install):
 ```
 git clone git@github.com:tobybreckon/pdfjam-extras.git
 cd pdfjam-extras-master
@@ -82,9 +90,9 @@ at the terminal gives information about usage and other aspects of the ``pdfjam-
 
 ---
 
-##### Building the RPM ...
+##### Building the packages ...
 
-As as _aide memoir_ to myself, this is how to re-build the rpm:
+As as _aide memoir_ to myself, this is how to re-build the RPM:
 
 ```
 git clone git@github.com:tobybreckon/pdfjam-extras.git
@@ -94,4 +102,12 @@ cd ~/rpmbuild/
 rpmbuild -bb SPECS/pdfjam-extras.spec
 sudo rpmsign --addsign RPMS/noarch/pdfjam-extras-0.1-0.noarch.rpm
 rpm --checksig RPMS/noarch/pdfjam-extras-0.1-0.noarch.rpm
+```
+
+Either package can also be built using the following script
+(from inside the ``pdfjam-extras`` directory):
+
+```
+bash ./package.sh rpm
+bash ./package.sh deb
 ```
