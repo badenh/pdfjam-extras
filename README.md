@@ -102,8 +102,8 @@ rpmdev-setuptree
 ln -s ~/pdfjam-extras/pdfjam-extras.spec ~/rpmbuild/SPECS/
 cd ~/rpmbuild/
 rpmbuild -bb SPECS/pdfjam-extras.spec
-sudo -u $USER rpmsign --addsign RPMS/noarch/pdfjam-extras-0.1-0.noarch.rpm
-rpm --checksig RPMS/noarch/pdfjam-extras-0.1-0.noarch.rpm
+sudo -u $USER rpmsign --addsign RPMS/noarch/pdfjam-extras-*.noarch.rpm
+rpm --checksig RPMS/noarch/pdfjam-extras-*.noarch.rpm
 ```
 
 Either package can also be built using the following script
