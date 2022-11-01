@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 ##
 ################################################################################
 ##  pdfpun: A shell program to n-up pages of a PDF file with
