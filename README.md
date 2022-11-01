@@ -76,7 +76,7 @@ at the terminal gives information about usage and other aspects of the ``pdfjam-
 
 ### Version history
 
-**pdfjam-extras 0.11**:change all shebang lines in scripts to maximise cross platform/distribution compatibility; functionally unchangedno [Nov 2022].
+**pdfjam-extras 0.11**: change all shebang lines in scripts to maximise cross platform/distribution compatibility; functionally unchanged [Nov 2022].
 
 **pdfjam-extras 0.1**: first packaged version of scripts from **pdfjam 2.09**, functionally unchanged [June 2022].
 
