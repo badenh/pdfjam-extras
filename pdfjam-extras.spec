@@ -5,7 +5,7 @@
 ################################################################################
 
 Name:           pdfjam-extras
-Version:        0.1
+Version:        0.11
 Release:        0
 Summary:        a set of additional utility scripts for pdfjam
 License:        GPL-2.0-only

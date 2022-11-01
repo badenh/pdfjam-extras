@@ -7,7 +7,7 @@
 ################################################################################
 ##
 PACKAGE_NAME=pdfjam-extras
-VERSION=0.1
+VERSION=0.11
 RELEASE=1
 ARCHITECTURE_DEB=all
 ARCHITECTURE_RPM=noarch
