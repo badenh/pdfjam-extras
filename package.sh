@@ -45,7 +45,7 @@ case $1 in
     ln -sf $PWD/$PACKAGE_NAME.spec ~/rpmbuild/SPECS/
     cd ~/rpmbuild/
     rpmbuild -bb SPECS/$PACKAGE_NAME.spec
-    sudo -u toby rpmsign --addsign RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm
+    sudo -u $USER rpmsign --addsign RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm
     rpm --checksig RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm
     cp ~/rpmbuild/RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm $BASE_DIR
     ;;
