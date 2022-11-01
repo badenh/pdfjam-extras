@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash 
 ##
 ################################################################################
 # generic packager script - package software as .rpm or .deb Linux package
@@ -45,7 +45,7 @@ case $1 in
     ln -sf $PWD/$PACKAGE_NAME.spec ~/rpmbuild/SPECS/
     cd ~/rpmbuild/
     rpmbuild -bb SPECS/$PACKAGE_NAME.spec
-    sudo rpmsign --addsign RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm
+    sudo -u toby rpmsign --addsign RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm
     rpm --checksig RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm
     cp ~/rpmbuild/RPMS/noarch/$PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm $BASE_DIR
     ;;
@@ -92,7 +92,7 @@ case $1 in
     rm -f $PACKAGE_NAME-$VERSION-$((RELEASE-1)).$ARCHITECTURE_RPM.rpm
 
     ;;
-    
+
   *)
     echo
     echo "usage: package.sh [rpm | deb | clean]"
