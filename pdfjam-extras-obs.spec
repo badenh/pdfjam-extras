@@ -77,9 +77,9 @@ rm -rf %{_sourcedir}/master.zip
 ################################################################################
 
 %changelog
-* Tue Jun 21 2022 Toby Breckon <toby.breckon@durham.ac.uk> - 0.1
-  - package up the original scripts as provided from the pdfjam authors
 * Tue Nov 1 2022 Toby Breckon <toby.breckon@durham.ac.uk> - 0.11
   - change all shebang lines in scripts to maximise cross platform/distribution compatibility
+* Tue Jun 21 2022 Toby Breckon <toby.breckon@durham.ac.uk> - 0.1
+  - package up the original scripts as provided from the pdfjam authors
 
 ################################################################################
