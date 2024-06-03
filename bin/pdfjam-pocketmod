@@ -53,5 +53,5 @@ case ${1} in
 	pageSpec="$1" ;
 	shift ;;
 esac
-pdfjam $n $q $c $v -o /dev/stdout "$sourceFile" "$pageSpec" | pdfjam --angle 180 $n $q $v -o /dev/stdout /dev/stdin '1,8,7,6' | pdfjam --nup 4x2 --landscape --frame true  "$sourceFile" '2-5' /dev/stdin "$@"
+pdfjam $n $q $c $v -o /dev/stdout "$sourceFile" "$pageSpec" | pdfjam --angle 180 $n $q $v -o /dev/stdout /dev/stdin '1,8,7,6' | pdfjam --nup 4x2 --landscape --frame true  "$sourceFile" '2-5' /dev/stdin -o "${sourceFile%.*}_pocketmod.pdf"
 
