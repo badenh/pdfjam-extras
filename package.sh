@@ -7,7 +7,7 @@
 ################################################################################
 ##
 PACKAGE_NAME=pdfjam-extras
-VERSION=0.12
+VERSION=`cat pdfjam-extras.spec | grep Version | cut -d: -f2 | tr -d " "`
 RELEASE=1
 ARCHITECTURE_DEB=all
 ARCHITECTURE_RPM=noarch
