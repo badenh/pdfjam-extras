@@ -77,7 +77,7 @@ rm -rf %{_sourcedir}/master.zip
 ################################################################################
 
 %changelog
-* Fri Mov 1 2024 Toby Breckon <toby.breckon@durham.ac.uk> - 0.12
+* Fri Nov 1 2024 Toby Breckon <toby.breckon@durham.ac.uk> - 0.12
   - fix issue with pdfjam-pocketmod and directory output error message (credit/contributor:  Wikinaut)
 * Tue Nov 1 2022 Toby Breckon <toby.breckon@durham.ac.uk> - 0.11
   - change all shebang lines in scripts to maximise cross platform/distribution compatibility
