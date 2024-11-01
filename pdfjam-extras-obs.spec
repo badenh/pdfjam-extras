@@ -5,7 +5,7 @@
 ################################################################################
 
 Name:           pdfjam-extras
-Version:        0.11
+Version:        0.12
 Release:        0
 Summary:        a set of additional utility scripts for pdfjam
 License:        GPL-2.0-only
@@ -77,6 +77,8 @@ rm -rf %{_sourcedir}/master.zip
 ################################################################################
 
 %changelog
+* Fri Mov 1 2024 Toby Breckon <toby.breckon@durham.ac.uk> - 0.12
+  - fix issue with pdfjam-pocketmod and directory output error message (credit/contributor:  Wikinaut)
 * Tue Nov 1 2022 Toby Breckon <toby.breckon@durham.ac.uk> - 0.11
   - change all shebang lines in scripts to maximise cross platform/distribution compatibility
 * Tue Jun 21 2022 Toby Breckon <toby.breckon@durham.ac.uk> - 0.1
