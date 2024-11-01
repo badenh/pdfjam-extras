@@ -6,7 +6,7 @@ A separately packaged version of the 'wrapper' scripts that previously were dist
 
 **what** ? : a packaged version of the ``pdf[nup,pun,join,90,180,270,flip,book,pocketmod,slides*up]`` scripts that were originally included (and installed) as part of [pdfjam](https://github.com/DavidFirth/pdfjam).
 
--- **[RPM download here](https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.11/pdfjam-extras-0.11-0.noarch.rpm)**, **[DEBIAN .deb download here](https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.11/pdfjam-extras_0.11-1_all.deb)**  and manual install instructions below.
+-- **[RPM download here](https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.12/pdfjam-extras-0.12-0.noarch.rpm)**, **[DEBIAN .deb download here](https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.12/pdfjam-extras_0.12-1_all.deb)**  and manual install instructions below.
 
 These scripts are explicitly **not supported** by the original authors of [pdfjam](https://github.com/DavidFirth/pdfjam) for their [own reasons](https://github.com/DavidFirth/pdfjam-extras). It is indended this repo can become a place for _mild_ support as needed.  They are licensed under the [GPL](COPYING).
 
@@ -26,17 +26,17 @@ These scripts are explicitly **not supported** by the original authors of [pdfja
 
 The **easy way** (via a pre-packaged RPM, and signed public key):
 ```
-wget https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.11/pdfjam-extras-0.11-0.noarch.rpm
+wget https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.12/pdfjam-extras-0.12-0.noarch.rpm
 wget -O package-signing-key.pub https://breckon.org/toby/pgp.txt
 sudo rpm --import package-signing-key.pub
-sudo rpm -i pdfjam-extras-0.11-0.noarch.rpm
+sudo rpm -i pdfjam-extras-0.12-0.noarch.rpm
 ```
 [following RPM convention this installs the scripts into ``/usr/bin``]
 
 The _other_ **easy way** (via a pre-packaged .deb package):
 ```
-wget https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.11/pdfjam-extras_0.11-1_all.deb
-sudo dpkg -i pdfjam-extras_0.11-1_all.deb
+wget https://github.com/tobybreckon/pdfjam-extras/releases/download/v0.12/pdfjam-extras_0.12-1_all.deb
+sudo dpkg -i pdfjam-extras_0.12-1_all.deb
 ```
 [following .deb package convention this installs the scripts into ``/usr/bin`` + the .deb file is not digitally signed]
 
